@@ -1936,13 +1936,6 @@ function webViewerInitialized() {
   file = 'file' in params ? params.file : appConfig.defaultUrl;
   validateFileURL(file);
   var waitForBeforeOpening = [];
-  var fileInput = document.createElement('input');
-  fileInput.id = appConfig.openFileInputName;
-  fileInput.className = 'fileInput';
-  fileInput.setAttribute('type', 'file');
-  fileInput.oncontextmenu = _ui_utils.noContextMenuHandler;
-//  document.body.appendChild(fileInput);
-  fileInput.value = null;
  
   if (PDFViewerApplication.viewerPrefs['pdfBugEnabled']) {
     var hash = document.location.hash.substring(1);
